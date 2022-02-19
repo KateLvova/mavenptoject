@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+    <TITLE>Selenium practice | page 2</TITLE>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</HEAD>
+<BODY>
+
+<p> Hello <b><span id ="fname"></span> <span id ="lname"></span></b>. This is a second page</p>
+
+<script language="JavaScript">
+  function processUser()
+  {
+    var parameters = location.search.substring(1).split("&");
+
+    var temp = parameters[0].split("=");
+    l = unescape(temp[1]);
+    temp = parameters[1].split("=");
+    p = unescape(temp[1]);
+    document.getElementById("fname").innerHTML = l;
+    document.getElementById("lname").innerHTML = p;
+  }
+ processUser();
+</script>
+</BODY>
+
+</HTML>
